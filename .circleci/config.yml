@@ -1,16 +1,25 @@
 version: 2.1
 
 jobs:
+  api:
+    docker:
+      - image: circleci/node:9.6.1
+
+      steps:
+
+        - run:
+            npm -v
+
+
   build:
     docker:
+
+
+
+
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
 
-
-
-    environment:
-      # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m
 
     steps:
       - checkout
