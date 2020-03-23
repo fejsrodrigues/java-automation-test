@@ -8,8 +8,16 @@ jobs:
     steps:
         - checkout
         - run:
-            name: teste
-            command: npm -v
+            name: Install ServeRest
+            command: npm i serverest
+
+        - run:
+            name: running serverest
+            command: npx serverest -p 3030
+
+              - run:
+                  name: curl
+                  command: curl http://localhost:3030/
 
 
   test:
@@ -42,6 +50,8 @@ jobs:
       - run:
           name: Analyze on SonarCloud
           command: mvn verify sonar:sonar
+
+
 workflows:
 #  main:
 #    jobs:
