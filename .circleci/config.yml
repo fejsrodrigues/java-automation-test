@@ -10,8 +10,18 @@ jobs:
           name: Analyze on SonarCloud
           command: mvn verify sonar:sonar
 
+  test:
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Version
+          command: mvn -version
+
 workflows:
   main:
     jobs:
       - build:
           context: SonarCloud
+      -test
