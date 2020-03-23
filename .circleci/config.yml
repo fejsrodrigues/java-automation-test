@@ -15,9 +15,6 @@ jobs:
             name: running serverest
             command: npx serverest -p 3030
 
-              - run:
-                  name: curl
-                  command: curl http://localhost:3030/
 
 
   test:
