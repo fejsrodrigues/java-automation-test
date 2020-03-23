@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  api:
+  build:
     docker:
       - image: circleci/node:chakracore-8.10.0
 
@@ -13,7 +13,7 @@ jobs:
             command: npm -v
 
 
-  build:
+  test:
     docker:
 
 
@@ -45,7 +45,13 @@ jobs:
           name: Analyze on SonarCloud
           command: mvn verify sonar:sonar
 workflows:
-  main:
+#  main:
+#    jobs:
+#      - build:
+#          context: SonarCloud
+  version: 2
+  build_and_test:
     jobs:
       - build:
           context: SonarCloud
+      - test
