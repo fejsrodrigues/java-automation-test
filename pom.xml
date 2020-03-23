@@ -61,6 +61,16 @@
                     <systemPropertyVariables>
                         <propertyName>firefox</propertyName>
                     </systemPropertyVariables>
+                    <includes>
+
+                        <!-- UNCOMMENT BELOW LINE - To execute feature files with a single
+                            runner -->
+                        <!-- <include>**/Default.java</include> -->
+
+                        <!-- UNCOMMENT BELOW LINE - To execute feature files with multiple
+                            runners -->
+                        <include>**/*Runner*</include>
+                    </includes>
                 </configuration>
             </plugin>
 
