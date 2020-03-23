@@ -2,22 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:chakracore-8.10.0
 
-    steps:
-        - checkout
-        - run:
-            name: Install ServeRest
-            command: npm i serverest
-
-        - run:
-            name: running serverest
-            command: npx serverest -p 3030
-
-
-
-  test:
     docker:
 
       # specify the version you desire here
@@ -50,13 +35,11 @@ jobs:
 
 
 workflows:
-#  main:
-#    jobs:
-#      - build:
-#          context: SonarCloud
+  #  main:
+  #    jobs:
+  #      - build:
+  #          context: SonarCloud
   version: 2
-  build_and_test:
     jobs:
-      - build
-      - test:
+      - build:
           context: SonarCloud
