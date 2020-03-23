@@ -3,9 +3,10 @@ version: 2.1
 jobs:
   api:
     docker:
-      - image: circleci/node:9.6.1
+      - image: circleci/node:chakracore-8.10.0
 
       steps:
+        - checkout
 
         - run:
             name: teste
