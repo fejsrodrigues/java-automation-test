@@ -8,6 +8,7 @@ import io.cucumber.java.pt.Quando;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
+
 public class PostStepDefenition {
 
     private Response response;
