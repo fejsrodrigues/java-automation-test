@@ -22,65 +22,39 @@ public class PostRequest {
     @JsonProperty("userId")
     private Integer userId;
 
-    @JsonProperty("id")
     public Integer getId() {
         return id;
     }
 
-    @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public PostRequest withId(Integer id) {
+    public PostRequest setId(Integer id) {
         this.id = id;
         return this;
     }
 
-    @JsonProperty("title")
     public String getTitle() {
         return title;
     }
 
-    @JsonProperty("title")
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public PostRequest withTitle(String title) {
+    public PostRequest setTitle(String title) {
         this.title = title;
         return this;
     }
 
-    @JsonProperty("body")
     public String getBody() {
         return body;
     }
 
-    @JsonProperty("body")
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public PostRequest withBody(String body) {
+    public PostRequest setBody(String body) {
         this.body = body;
         return this;
     }
 
-    @JsonProperty("userId")
     public Integer getUserId() {
         return userId;
     }
 
-    @JsonProperty("userId")
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public PostRequest withUserId(Integer userId) {
+    public PostRequest setUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
-
-
 }
